@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Registrieren - Culinary Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="icons.css">
+    <style>
+        .auth-container {
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 40px;
+        }
+        
+        .auth-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .auth-box h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
+        
+        .tab-button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: #ecf0f1;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .tab-button.active {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .auth-form {
+            display: none;
+        }
+        
+        .auth-form.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 14px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-button:hover {
+            background: #c0392b;
+        }
+        
+        .info-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16h10V4M9 9h6M9 13h6M5 20h14"></path></svg> Culinary Kitchen</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="rezepte-uebersicht.html">Rezepte</a></li>
+                <li><a href="rezepte-einreichen.html">Rezept Einreichen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="auth-links">
+                    <a href="login.html">Login / Registrieren</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Willkommen bei Culinary Kitchen</h2>
+            
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="switchTab('login')">Login</button>
+                <button class="tab-button" onclick="switchTab('register')">Registrieren</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="login-email">E-Mail</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Passwort</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="submit-button">Einloggen</button>
+                <p class="info-text">Speichere deine Lieblingsrezepte und greife von überall darauf zu.</p>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label for="register-email">E-Mail</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Passwort (min. 6 Zeichen)</label>
+                    <input type="password" id="register-password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="register-password-confirm">Passwort bestätigen</label>
+                    <input type="password" id="register-password-confirm" required minlength="6">
+                </div>
+                <button type="submit" class="submit-button">Registrieren</button>
+                <p class="info-text">Erstelle einen kostenlosen Account und verwalte deine Favoriten.</p>
+            </form>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 Culinary Kitchen. Alle Rechte vorbehalten. | Kontakt: recipes@culinarykitchen.com</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+
+    <script>
+        function switchTab(tab) {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const buttons = document.querySelectorAll('.tab-button');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            if (tab === 'login') {
+                loginForm.classList.add('active');
+                registerForm.classList.remove('active');
+                buttons[0].classList.add('active');
+            } else {
+                registerForm.classList.add('active');
+                loginForm.classList.remove('active');
+                buttons[1].classList.add('active');
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            login(email, password);
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-password-confirm').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwörter stimmen nicht überein!');
+                return;
+            }
+            
+            register(email, password);
+        }
+
+        // Wenn bereits eingeloggt, zur Startseite weiterleiten
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezepte - Culinary Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="icons.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16h10V4M9 9h6M9 13h6M5 20h14"></path></svg> Culinary Kitchen</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="rezepte-uebersicht.html">Rezepte</a></li>
+                <li><a href="rezepte-einreichen.html">Rezept Einreichen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="auth-links">
+                    <a href="login.html">Login / Registrieren</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="recipes-hero">
+        <div class="recipes-hero-content">
+            <h1>Unsere Rezepte</h1>
+            <p>Erkunde unsere Sammlung von köstlichen und einfachen Rezepten</p>
+        </div>
+    </section>
+
+    <section class="recipes-section">
+        <div class="recipes-grid">
+            <div class="recipe-card">
+                <img src="bilder/pasta-carbonara.jpg" alt="Pasta Carbonara" class="recipe-image">
+                <h3>Pasta Carbonara</h3>
+                <p class="cuisine">Italienisch</p>
+                <p class="description">Klassische italienische Pasta mit cremiger Sauce, Eiern und knusprigem Speck</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/pasta-carbonara.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/gemuesesuppe.jpg" alt="Gemüsesuppe" class="recipe-image">
+                <h3>Gemüsesuppe</h3>
+                <p class="cuisine">Gesund</p>
+                <p class="description">Gesunde und herzhafte Suppe gefüllt mit frischem saisonalem Gemüse</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 6 Portionen</span>
+                </div>
+                <a href="rezepte/gemuesesuppe.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/hahnchen-curry.jpg" alt="Hähnchen Curry" class="recipe-image">
+                <h3>Hähnchen Curry</h3>
+                <p class="cuisine">Indisch</p>
+                <p class="description">Würziges und geschmackvolles indisches Curry mit zartem Hähnchen</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 45 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/hahnchen-curry.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/caesar-salat.jpg" alt="Caesar Salat" class="recipe-image">
+                <h3>Caesar Salat</h3>
+                <p class="cuisine">Leicht</p>
+                <p class="description">Frischer und knuspriger Salat mit hausgemachtem Caesar-Dressing und Croutons</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 15 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 2 Portionen</span>
+                </div>
+                <a href="rezepte/caesar-salat.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/schokoladenkuchen.jpg" alt="Schokoladenkuchen" class="recipe-image">
+                <h3>Schokoladenkuchen</h3>
+                <p class="cuisine">Nachtisch</p>
+                <p class="description">Reicher und köstlicher Schokoladenkuchen mit cremiger Schokoladencreme</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 50 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 8 Portionen</span>
+                </div>
+                <a href="rezepte/schokoladenkuchen.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/tacos-al-pastor.jpg" alt="Tacos al Pastor" class="recipe-image">
+                <h3>Tacos al Pastor</h3>
+                <p class="cuisine">Mexikanisch</p>
+                <p class="description">Authentische mexikanische Tacos mit mariniertem Schweinefleisch und Ananas</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 35 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/tacos-al-pastor.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/gourmet-burger.jpg" alt="Gourmet Burger" class="recipe-image">
+                <h3>Gourmet Burger</h3>
+                <p class="cuisine">Amerikanisch</p>
+                <p class="description">Saftiger Burger mit gegrilltem Fleisch, frischen Gemüse und hausgemachter Sauce</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 25 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/gourmet-burger.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/ramen-nudeln.jpg" alt="Ramen Nudeln" class="recipe-image">
+                <h3>Ramen Nudeln</h3>
+                <p class="cuisine">Japanisch</p>
+                <p class="description">Köstliche japanische Nudeln in einer würzigen und aromatischen Brühe mit Toppings</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 40 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 2 Portionen</span>
+                </div>
+                <a href="rezepte/ramen-nudeln.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/risotto-pilze.jpg" alt="Risotto Pilze" class="recipe-image">
+                <h3>Risotto Pilze</h3>
+                <p class="cuisine">Italienisch</p>
+                <p class="description">Cremiges Risotto mit frischen Pilzen, Parmesan und weißem Wein</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 35 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/risotto-pilze.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/gebratener-fisch.jpg" alt="Gebratener Fisch" class="recipe-image">
+                <h3>Gebratener Fisch</h3>
+                <p class="cuisine">Mittelmeer</p>
+                <p class="description">Knuspriger gebratener Fisch mit Zitrone und frischen Kräutern</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/gebratener-fisch.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/schokoladen-cookies.jpg" alt="Schokoladen Cookies" class="recipe-image">
+                <h3>Schokoladen Cookies</h3>
+                <p class="cuisine">Gebäck</p>
+                <p class="description">Weiche Schokoladen Cookies mit Schmelzschokolade und Nusskernen</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 12 Stück</span>
+                </div>
+                <a href="rezepte/schokoladen-cookies.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/kartoffelsalat.jpg" alt="Kartoffelsalat" class="recipe-image">
+                <h3>Kartoffelsalat</h3>
+                <p class="cuisine">Deutsch</p>
+                <p class="description">Ein klassischer Kartoffelsalat mit cremiger Sauce und frischen Kräutern</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 40 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 6 Portionen</span>
+                </div>
+                <a href="rezepte/kartoffelsalat.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/spaghetti-bolognese.jpg" alt="Spaghetti Bolognese" class="recipe-image">
+                <h3>Spaghetti Bolognese</h3>
+                <p class="cuisine">Italienisch</p>
+                <p class="description">Klassisches italienisches Gericht mit saftiger Hackfleischsauce und Spaghetti</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 45 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/spaghetti-bolognese.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/wiener-schnitzel.jpg" alt="Wiener Schnitzel" class="recipe-image">
+                <h3>Wiener Schnitzel</h3>
+                <p class="cuisine">Österreichisch</p>
+                <p class="description">Klassisches österreichisches Gericht mit paniertem Kalbsschnitzel</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/wiener-schnitzel.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/sushi-rolls.jpg" alt="Sushi Rolls" class="recipe-image">
+                <h3>Sushi Rolls</h3>
+                <p class="cuisine">Japanisch</p>
+                <p class="description">Frische California Rolls mit Avocado, Gurke und Krebsfleisch</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/sushi-rolls.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/lasagne.jpg" alt="Lasagne" class="recipe-image">
+                <h3>Lasagne</h3>
+                <p class="cuisine">Italienisch</p>
+                <p class="description">Klassische italienische Lasagne mit Hackfleisch und Bechamel-Sauce</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 45 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 6 Portionen</span>
+                </div>
+                <a href="rezepte/lasagne.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/ratatouille.jpg" alt="Ratatouille" class="recipe-image">
+                <h3>Ratatouille</h3>
+                <p class="cuisine">Französisch</p>
+                <p class="description">Französisches Gemüse-Eintopf mit Auberginen, Zucchini und Tomaten</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 40 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/ratatouille.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/paella.jpg" alt="Paella" class="recipe-image">
+                <h3>Paella</h3>
+                <p class="cuisine">Spanisch</p>
+                <p class="description">Spanisches Reisgericht mit Meeresfrüchten und Safran</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/paella.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/beef-stroganoff.jpg" alt="Beef Stroganoff" class="recipe-image">
+                <h3>Beef Stroganoff</h3>
+                <p class="cuisine">Russisch</p>
+                <p class="description">Russisches Rindfleischgericht mit saurer Sahne und Pilzen</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 25 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/beef-stroganoff.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/thai-green-curry.jpg" alt="Thai Green Curry" class="recipe-image">
+                <h3>Thai Green Curry</h3>
+                <p class="cuisine">Thailändisch</p>
+                <p class="description">Würziges thailändisches Curry mit Kokosmilch und Gemüse</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/thai-green-curry.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/quiche-lorraine.jpg" alt="Quiche Lorraine" class="recipe-image">
+                <h3>Quiche Lorraine</h3>
+                <p class="cuisine">Französisch</p>
+                <p class="description">Französische Tarte mit Speck, Eiern und Käse</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 35 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 6 Portionen</span>
+                </div>
+                <a href="rezepte/quiche-lorraine.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/falafel.jpg" alt="Falafel" class="recipe-image">
+                <h3>Falafel</h3>
+                <p class="cuisine">Nahöstlich</p>
+                <p class="description">Knusprige Kichererbsenbällchen aus dem Nahen Osten</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 15 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/falafel.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/borscht.jpg" alt="Borscht" class="recipe-image">
+                <h3>Borscht</h3>
+                <p class="cuisine">Osteuropäisch</p>
+                <p class="description">Rote Rübensuppe aus Osteuropa mit saurer Sahne</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 40 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 6 Portionen</span>
+                </div>
+                <a href="rezepte/borscht.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/kimchi-fried-rice.jpg" alt="Kimchi Fried Rice" class="recipe-image">
+                <h3>Kimchi Fried Rice</h3>
+                <p class="cuisine">Koreanisch</p>
+                <p class="description">Koreanisches Reisgericht mit fermentiertem Kimchi</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 15 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 2 Portionen</span>
+                </div>
+                <a href="rezepte/kimchi-fried-rice.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/shakshuka.jpg" alt="Shakshuka" class="recipe-image">
+                <h3>Shakshuka</h3>
+                <p class="cuisine">Nordafrikanisch</p>
+                <p class="description">Nordafrikanisches Eiergericht in Tomatensauce</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/shakshuka.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/bouillabaisse.jpg" alt="Bouillabaisse" class="recipe-image">
+                <h3>Bouillabaisse</h3>
+                <p class="cuisine">Französisch</p>
+                <p class="description">Französische Fischsuppe aus Marseille mit Meeresfrüchten</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 40 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 6 Portionen</span>
+                </div>
+                <a href="rezepte/bouillabaisse.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/tiramisu.jpg" alt="Tiramisu" class="recipe-image">
+                <h3>Tiramisu</h3>
+                <p class="cuisine">Italienisch</p>
+                <p class="description">Italienisches Dessert mit Mascarpone und Kaffee</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 8 Portionen</span>
+                </div>
+                <a href="rezepte/tiramisu.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/creme-brulee.jpg" alt="Creme Brulee" class="recipe-image">
+                <h3>Creme Brulee</h3>
+                <p class="cuisine">Französisch</p>
+                <p class="description">Französisches Vanille-Dessert mit karamellisierter Zuckerkruste</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 50 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 6 Portionen</span>
+                </div>
+                <a href="rezepte/creme-brulee.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/baklava.jpg" alt="Baklava" class="recipe-image">
+                <h3>Baklava</h3>
+                <p class="cuisine">Türkisch</p>
+                <p class="description">Türkisches Blätterteiggebäck mit Nüssen und Honig</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 45 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 12 Stück</span>
+                </div>
+                <a href="rezepte/baklava.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/poutine.jpg" alt="Poutine" class="recipe-image">
+                <h3>Poutine</h3>
+                <p class="cuisine">Kanadisch</p>
+                <p class="description">Kanadisches Gericht mit Pommes, Käse und Bratensauce</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/poutine.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/bibimbap.jpg" alt="Bibimbap" class="recipe-image">
+                <h3>Bibimbap</h3>
+                <p class="cuisine">Koreanisch</p>
+                <p class="description">Koreanisches Reisgericht mit Gemüse und Fleisch</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/bibimbap.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/ceviche.jpg" alt="Ceviche" class="recipe-image">
+                <h3>Ceviche</h3>
+                <p class="cuisine">Peruanisch</p>
+                <p class="description">Peruanisches Gericht mit mariniertem rohem Fisch</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/ceviche.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 Culinary Kitchen. Alle Rechte vorbehalten. | Kontakt: recipes@culinarykitchen.com</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="svg-icons.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

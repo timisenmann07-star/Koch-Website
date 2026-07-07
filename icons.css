@@ -1,0 +1,21 @@
+/* SVG Icons Styles */
+
+.icon {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: -0.25em;
+    margin-right: 0.3em;
+    fill: currentColor;
+}
+
+/* Icon sizing variants */
+.icon-sm {
+    width: 1em;
+    height: 1em;
+}
+
+.icon-lg {
+    width: 1.5em;
+    height: 1.5em;
+}

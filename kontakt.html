@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Culinary Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="icons.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16h10V4M9 9h6M9 13h6M5 20h14"></path></svg> Culinary Kitchen</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="rezepte-uebersicht.html">Rezepte</a></li>
+                <li><a href="rezepte-einreichen.html">Rezept Einreichen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="auth-links">
+                    <a href="login.html">Login / Registrieren</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Kontaktiere uns</h1>
+        <p>Wir würden gerne von dir hören! Stelle deine Fragen oder schreib uns deine Meinung.</p>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Kontaktinformationen</h2>
+                
+                <div class="contact-item">
+                    <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> E-Mail</h3>
+                    <p><a href="mailto:recipes@culinarykitchen.com">recipes@culinarykitchen.com</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Telefon</h3>
+                    <p><a href="tel:+49123456789">+49 (0) 123 456 789</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Adresse</h3>
+                    <p>Culinary Kitchen<br>Küchenstraße 42<br>12345 Berlin<br>Deutschland</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Öffnungszeiten</h3>
+                    <p>Montag - Freitag: 9:00 - 17:00 Uhr<br>Samstag: 10:00 - 14:00 Uhr<br>Sonntag: Geschlossen</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Kontaktformular</h2>
+                <form action="https://formspree.io/f/xzdrvwnl" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Betreff *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Nachricht *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Nachricht senden</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 Culinary Kitchen. Alle Rechte vorbehalten. | Kontakt: recipes@culinarykitchen.com</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="svg-icons.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Favoriten - Culinary Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="icons.css">
+    <style>
+        .favorites-hero {
+            background: linear-gradient(135deg, #F9F9F9 0%, #F0F0F0 100%);
+            color: #333;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .favorites-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .favorites-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .no-favorites {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin: 60px 0;
+        }
+        
+        .error {
+            text-align: center;
+            color: #e74c3c;
+            font-size: 1.1rem;
+            margin: 60px 0;
+        }
+        
+        .remove-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .remove-btn:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16h10V4M9 9h6M9 13h6M5 20h14"></path></svg> Culinary Kitchen</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="rezepte-uebersicht.html">Rezepte</a></li>
+                <li><a href="rezepte-einreichen.html">Rezept Einreichen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="auth-links">
+                    <a href="login.html">Login / Registrieren</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="favorites-hero">
+        <h1><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> Meine Favoriten</h1>
+        <p>Deine gespeicherten Lieblingsrezepte</p>
+    </section>
+
+    <div class="favorites-container">
+        <div id="favorites-container">
+            <p style="text-align: center;">Lade Favoriten...</p>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 Culinary Kitchen. Alle Rechte vorbehalten. | Kontakt: recipes@culinarykitchen.com</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="recipe-data.js"></script>
+    <script src="svg-icons.js"></script>
+    <script src="favorites.js"></script>
+
+    <script>
+        // Sicherstellen dass Benutzer eingeloggt ist
+        requireAuth();
+        
+        // Favoriten laden wenn authentifiziert
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                loadFavorites();
+            }
+        });
+    </script>
+</body>
+</html>

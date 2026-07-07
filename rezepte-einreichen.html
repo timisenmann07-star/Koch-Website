@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezept Einreichen - Culinary Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="icons.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16h10V4M9 9h6M9 13h6M5 20h14"></path></svg> Culinary Kitchen</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="rezepte-uebersicht.html">Rezepte</a></li>
+                <li><a href="rezepte-einreichen.html">Rezept Einreichen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="auth-links">
+                    <a href="login.html">Login / Registrieren</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Reiche dein Rezept ein</h1>
+        <p>Teile dein Lieblingsrezept mit unserer Community! Wir freuen uns auf deine kulinarischen Kreationen.</p>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Einreichungsinformationen</h2>
+                
+                <div class="info-item">
+                    <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> E-Mail</h3>
+                    <p>recipes@culinarykitchen.com</p>
+                </div>
+
+                <div class="info-item">
+                    <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="13" x2="8" y2="13"></line><line x1="12" y1="17" x2="8" y2="17"></line></svg> Was wir benötigen</h3>
+                    <ul>
+                        <li>Rezeptname</li>
+                        <li>Zutatenliste</li>
+                        <li>Schritt-für-Schritt Anleitung</li>
+                        <li>Zubereitungszeit</li>
+                        <li>Portionsanzahl</li>
+                        <li>Optional: Fotos deines Gerichts</li>
+                    </ul>
+                </div>
+
+                <div class="info-item">
+                    <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Antwortzeit</h3>
+                    <p>Wir prüfen dein Rezept innerhalb von 3-5 Werktagen und melden uns bei dir.</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Rezept Einreichen</h2>
+                <form action="https://formspree.io/f/mwvowlnv" method="POST">
+                    <div class="form-group">
+                        <label for="name">Dein Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Deine E-Mail *</label>
+                        <input type="email" id="email" name="_replyto" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipe-name">Rezeptname *</label>
+                        <input type="text" id="recipe-name" name="recipe-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cuisine">Küche/Kategorie *</label>
+                        <select id="cuisine" name="cuisine" required>
+                            <option value="">Bitte wählen...</option>
+                            <option value="italienisch">Italienisch</option>
+                            <option value="asiatisch">Asiatisch</option>
+                            <option value="amerikanisch">Amerikanisch</option>
+                            <option value="mexikanisch">Mexikanisch</option>
+                            <option value="deutsch">Deutsch</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="vegetarisch">Vegetarisch</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="andere">Andere</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prep-time">Zubereitungszeit (Minuten) *</label>
+                        <input type="number" id="prep-time" name="prep-time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servings">Anzahl Portionen *</label>
+                        <input type="number" id="servings" name="servings" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ingredients">Zutaten * (eine Zutat pro Zeile)</label>
+                        <textarea id="ingredients" name="ingredients" rows="8" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instructions">Zubereitungsanleitung * (Schritt für Schritt)</label>
+                        <textarea id="instructions" name="instructions" rows="10" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Zusätzliche Hinweise oder Tipps</label>
+                        <textarea id="notes" name="notes" rows="4"></textarea>
+                    </div>
+
+                    <input type="hidden" name="_subject" value="Neues Rezept eingereicht">
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="submit-button">Rezept Einreichen</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 Culinary Kitchen. Alle Rechte vorbehalten. | Kontakt: recipes@culinarykitchen.com</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="svg-icons.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

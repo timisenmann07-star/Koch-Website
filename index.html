@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite - Culinary Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="icons.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16h10V4M9 9h6M9 13h6M5 20h14"></path></svg> Culinary Kitchen</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="rezepte-uebersicht.html">Rezepte</a></li>
+                <li><a href="rezepte-einreichen.html">Rezept Einreichen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="auth-links">
+                    <a href="login.html">Login / Registrieren</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Entdecke köstliche Rezepte</h1>
+            <p>Beherrsche die Kochkunst mit unseren einfachen Rezepten und Küchentipps</p>
+            <a href="rezepte-uebersicht.html" class="cta-button">Rezepte erkunden</a>
+        </div>
+    </section>
+
+    <section class="recommended-section">
+        <h2>Empfohlene Rezepte</h2>
+        <div class="recommended-grid">
+            <div class="recipe-card">
+                <img src="bilder/gourmet-burger.jpg" alt="Gourmet Burger" class="recipe-image">
+                <h3>Gourmet Burger</h3>
+                <p class="cuisine">Amerikanisch</p>
+                <p class="description">Saftiger Burger mit premium Zutaten und hausgemachten Saucen</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/gourmet-burger.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/schokoladen-cookies.jpg" alt="Schokoladen Cookies" class="recipe-image">
+                <h3>Schokoladen Cookies</h3>
+                <p class="cuisine">Dessert</p>
+                <p class="description">Weiche und knusprige Cookies mit reichlich Schokoladenstückchen</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 25 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 24 Cookies</span>
+                </div>
+                <a href="rezepte/schokoladen-cookies.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="bilder/hahnchen-curry.jpg" alt="Hähnchen Curry" class="recipe-image">
+                <h3>Hähnchen Curry</h3>
+                <p class="cuisine">Indisch</p>
+                <p class="description">Würziges und geschmackvolles indisches Curry mit zartem Hähnchen</p>
+                <div class="recipe-details">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 45 Min</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg> 4 Portionen</span>
+                </div>
+                <a href="rezepte/hahnchen-curry.html" class="recipe-link">Rezept anzeigen</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 Culinary Kitchen. Alle Rechte vorbehalten. | Kontakt: recipes@culinarykitchen.com</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="svg-icons.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

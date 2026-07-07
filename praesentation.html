@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Kitchen - Projektpräsentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #e74c3c;
+        }
+        .slide {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .code {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #e74c3c;
+            font-family: monospace;
+        }
+        .question {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Culinary Kitchen - BK2 Projektpräsentation</h1>
+
+    <div class="slide">
+        <h2>Folie 1: Projektübersicht</h2>
+        <p><strong>Was ist Culinary Kitchen?</strong></p>
+        <p>Eine interaktive Rezept-Website, die es Benutzern ermöglicht:</p>
+        <ul>
+            <li>Rezepte zu durchsuchen und anzusehen</li>
+            <li>Favoriten zu speichern (mit Firebase)</li>
+            <li>Sich anzumelden und zu registrieren</li>
+            <li>Neue Rezepte einzureichen</li>
+        </ul>
+        <p><strong>Technologien:</strong> HTML, CSS, JavaScript, Firebase</p>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 2: Projektstruktur</h2>
+        <p>Zeige die Ordnerstruktur im VS Code:</p>
+        <div class="code">
+Culinary Kitchen/<br>
+├── index.html (Startseite)<br>
+├── styles.css (Design)<br>
+├── firebase-config.js (Firebase Setup)<br>
+├── auth.js (Login/Logout)<br>
+├── favorites.js (Favoriten-System)<br>
+├── rezepte/ (Einzelne Rezepte)<br>
+└── bilder/ (Rezept-Bilder)
+        </div>
+        <p><strong>Erklärung:</strong> Jede Datei hat eine klare Aufgabe - Trennung von Design (CSS), Logik (JS) und Inhalt (HTML)</p>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 3: HTML-Grundstruktur</h2>
+        <p>Jede Seite folgt diesem Aufbau:</p>
+        <div class="code">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="de"&gt;<br>
+&lt;head&gt;<br>
+    &lt;meta charset="UTF-8"&gt;<br>
+    &lt;title&gt;Titel&lt;/title&gt;<br>
+    &lt;link rel="stylesheet" href="styles.css"&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &lt;header&gt;Navigation&lt;/header&gt;<br>
+    &lt;main&gt;Inhalt&lt;/main&gt;<br>
+    &lt;footer&gt;Footer&lt;/footer&gt;<br>
+    &lt;script src="skript.js"&gt;&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+        </div>
+        <p><strong>Warum wichtig?</strong> Klare Struktur macht den Code wartbar und zugänglich</p>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 4: CSS-Styling</h2>
+        <p>Beispiel für responsive Design:</p>
+        <div class="code">
+.recipe-card {<br>
+    display: flex;<br>
+    flex-direction: column;<br>
+    border: 1px solid #ddd;<br>
+    border-radius: 8px;<br>
+}<br><br>
+@media (max-width: 768px) {<br>
+    .recipe-card {<br>
+        margin: 10px;<br>
+    }<br>
+}
+        </div>
+        <p><strong>Erklärung:</strong> Flexbox für Layout, Media Queries für Mobile-Geräte</p>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 5: JavaScript - Firebase Integration</h2>
+        <p>Firebase-Konfiguration:</p>
+        <div class="code">
+// Firebase initialisieren<br>
+const firebaseConfig = {<br>
+    apiKey: "...",<br>
+    authDomain: "...",<br>
+    projectId: "koch-website"<br>
+};<br>
+firebase.initializeApp(firebaseConfig);<br>
+const auth = firebase.auth();<br>
+const db = firebase.firestore();
+        </div>
+        <p><strong>Warum Firebase?</strong> Einfache Authentifizierung und Datenbank ohne eigenen Server</p>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 6: Authentifizierung</h2>
+        <p>Login-Funktion:</p>
+        <div class="code">
+async function login(email, password) {<br>
+    try {<br>
+        const userCredential = await auth.signInWithEmailAndPassword(email, password);<br>
+        alert('Login erfolgreich!');<br>
+        window.location.href = 'index.html';<br>
+        return userCredential.user;<br>
+    } catch (error) {<br>
+        alert('Login fehlgeschlagen.');<br>
+    }<br>
+}
+        </div>
+        <p><strong>async/await:</strong> Wartet auf Firebase-Antwort ohne Seite zu blockieren</p>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 7: Favoriten-System</h2>
+        <p>Favoriten hinzufügen:</p>
+        <div class="code">
+async function addToFavorites(recipeId, recipeName) {<br>
+    const user = auth.currentUser;<br>
+    if (!user) {<br>
+        alert('Bitte anmelden!');<br>
+        return;<br>
+    }<br>
+    <br>
+    // In Firebase speichern<br>
+    await db.collection('favorites')<br>
+        .doc(user.uid)<br>
+        .collection('recipes')<br>
+        .doc(recipeId)<br>
+        .set({ recipeId, recipeName });<br>
+}
+        </div>
+        <p><strong>Datenstruktur:</strong> favorites/{userId}/recipes/{recipeId}</p>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 8: Herausforderungen</h2>
+        <ul>
+            <li><strong>Responsive Design:</strong> Website auf verschiedenen Bildschirmgrößen</li>
+            <li><strong>Asynchrone Programmierung:</strong> Firebase-Aufrufe warten</li>
+            <li><strong>Benutzer-Status:</strong> UI je nach Login-Status aktualisieren</li>
+            <li><strong>Datenpersistenz:</strong> Favoriten über Sessions speichern</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 9: Demo</h2>
+        <p>Zeige live:</p>
+        <ul>
+            <li>Startseite browsen</li>
+            <li>Rezept ansehen</li>
+            <li>Login durchführen</li>
+            <li>Favoriten hinzufügen/entfernen</li>
+            <li>Favoriten-Seite ansehen</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 10: Lessons Learned</h2>
+        <ul>
+            <li>Planung ist wichtig - klare Struktur von Anfang an</li>
+            <li>Modularer Code (separate JS-Dateien) ist wartbar</li>
+            <li>Firebase vereinfacht Backend-Aufgaben</li>
+            <li>Testen auf verschiedenen Geräten nicht vergessen</li>
+            <li>Dokumentation hilft beim Erklären und Debuggen</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3>Mögliche Fragen:</h3>
+        <ul>
+            <li>Warum habt ihr Firebase verwendet?</li>
+            <li>Wie funktioniert das responsive Design?</li>
+            <li>Was ist der Unterschied zwischen sync und async Code?</li>
+            <li>Wie speichert ihr die Favoriten-Daten?</li>
+            <li>Was war die größte Herausforderung?</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Folie 11: Ausblick</h2>
+        <p>Mögliche Erweiterungen:</p>
+        <ul>
+            <li>Suchfunktion für Rezepte</li>
+            <li>Benutzerbewertungen</li>
+            <li>Rezept-Kategorien</li>
+            <li>Mobile App</li>
+            <li>Mehr Sprachen</li>
+        </ul>
+        <p><strong>Vielen Dank für Ihre Aufmerksamkeit!</strong></p>
+    </div>
+</body>
+</html></content>
+<parameter name="filePath">/Users/timisenmann/Desktop/HTML/praesentation.html
